@@ -1,0 +1,101 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-image {
+    position: absolute;
+    width: 10%;
+    top: 12px;
+    left: 12px;
+    z-index: 10; 
+}
+
+.skip {
+    position: absolute;
+    width: 13%;
+    top: 12px;
+    left: 330px;
+    z-index: 15; 
+}
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+td {
+    padding: 10px 0;
+}
+
+.text1, .text2, .text3, .text4 {
+    position: absolute;
+    color: white;
+    top: 108px;
+    font-size: 17px;
+    z-index: 11; 
+}
+
+.text1 { left: 90px; }
+.text2 { left: 60px; }
+.text3 { left: 70px; }
+.text4 { left: 30px; }
+
+@keyframes blink-smooth {
+    to {
+        color: transparent;
+    }
+}
+
+@keyframes blink {
+    50% {
+        color: transparent;
+    }
+}
+
+.highlight {
+    animation: 1s blink 500 steps(1);
+    animation-delay: 1s;
+}
+
+.form {
+    position: absolute;
+    width: 17%;
+    top: 248px;
+    left: 100px;
+    z-index: 10;  
+}
+
+.iTRADER {
+    position: absolute;
+    width: 27%;
+    top: 248px;
+    left: 218px;
+    z-index: 10; 
+}
+
+#index { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/元大期貨封面.jpg'); }
+#page1 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/期貨的起源.jpg'); }
+#page2 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/農夫的擔憂.jpg'); }
+#page3 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/商人的擔憂.jpg'); }
+#page4 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/期貨應運而生.jpg'); }
+#page5 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/期貨的益處.jpg'); }
+#q1 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/Q1.jpg'); }
+#q2 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/Q2.jpg'); }
+#q3 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/Q3.jpg'); }
+#q4 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/Q4.jpg'); }
+#thanks { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/感謝頁面.jpg'); }

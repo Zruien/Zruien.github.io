@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元大期貨</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/css/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/js/script.js"></script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/元大期貨封面.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/期貨的起源.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/農夫的擔憂.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/商人的擔憂.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/期貨應運而生.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/期貨的益處.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/Q1.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/Q2.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/Q3.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/Q4.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/感謝頁面.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/skip.png" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/問卷回饋.png" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/iTRADER.png" as="image">
+</head>
+<body>
+    <!-- 封面 -->
+    <div class="page" id="index" onclick="nextPage('page1')">
+    </div>
+    <!-- 期貨的起源 -->
+    <div class="page" id="page1" onclick="nextPage('page2')" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/skip.png" class="skip" onclick="nextPage('q1'); event.stopPropagation();">       
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('index'); event.stopPropagation();">
+    </div>
+    <!-- 農夫的擔憂 -->
+    <div class="page" id="page2" onclick="nextPage('page3')" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/skip.png" class="skip" onclick="nextPage('q1'); event.stopPropagation();">       
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('page1'); event.stopPropagation();">   
+    </div>
+    <!-- 商人的擔憂 -->
+    <div class="page" id="page3" onclick="nextPage('page4')" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/skip.png" class="skip" onclick="nextPage('q1'); event.stopPropagation();">       
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('page2'); event.stopPropagation();">    
+    </div>
+    <!-- 期貨應運而生 -->
+    <div class="page" id="page4" onclick="nextPage('page5')" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/skip.png" class="skip" onclick="nextPage('q1'); event.stopPropagation();">       
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('page3'); event.stopPropagation();">    
+    </div>
+    <!-- 期貨的益處 -->
+    <div class="page" id="page5" onclick="nextPage('q1')" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/skip.png" class="skip" onclick="nextPage('q1'); event.stopPropagation();">       
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('page4'); event.stopPropagation();">
+    </div>
+    <!-- 題目 1 -->
+    <div class="page" id="q1" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('page5'); event.stopPropagation();">
+        <div class="text1">
+            <h3>Q1: 什麼是期貨合約 ?</h3>
+            <table>
+                <tr>
+                    <td><strong>A. 一種立即交割的現貨合約</strong></td>
+                </tr>
+                <tr>
+                    <td><strong class="highlight" onclick="nextPage('q2')">B. 一種未來時間交割的合約</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>C. 一種無須交割的合約</strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 題目 2 -->
+    <div class="page" id="q2" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('q1'); event.stopPropagation();">
+        <div class="text2">
+            <h3>Q2: 期貨合約的標的物可以是什麼 ?</h3>
+            <table>
+                <tr>
+                    <td><strong>A. 農產品、金屬、能源等實體物品</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>B. 股票、債券等金融工具</strong></td>
+                </tr>
+                <tr>
+                    <td><strong class="highlight" onclick="nextPage('q3')">C. 以上皆是</strong></td>
+                </tr>
+            </table>    
+        </div>
+    </div>
+    <!-- 題目 3 -->
+    <div class="page" id="q3" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('q2'); event.stopPropagation();">
+        <div class="text3">
+            <h3>Q3: 交易期貨的優點有哪些 ?</h3>
+            <table>
+                <tr>
+                    <td><strong>A. 成本比股票便宜很多(交易稅、手續費)</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>B. 較低的交易限制</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>C. 財務槓桿效應大</strong></td>
+                </tr>
+                <tr>
+                    <td><strong class="highlight" onclick="nextPage('q4')">D. 以上皆是</strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 題目 4 -->
+    <div class="page" id="q4" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('q3'); event.stopPropagation();">
+        <div class="text4">
+            <h3>Q4: 國內期貨商首家專為交易人打造</h3>
+            <h3>的平台是?</h3>
+            <table>
+                <tr>
+                    <td><strong class="highlight" onclick="nextPage('thanks')">A. iTRADER交易達人 </strong></td>
+                </tr>
+                <tr>
+                    <td><strong>B. 滿滿的大平台</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>C. 知道你還有錢達人</strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 感謝頁面 -->
+    <div class="page" id="thanks" style="display:none;">
+        <img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/上一頁.png" class="top-image" onclick="prePage('q4'); event.stopPropagation();">
+        <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_wAUEoqjRdt07Z_ViLwlDFPneWL1F5eFP5_-vuFVQsYF9mA/formResponse"><img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/問卷回饋.png" class="form"></a>
+        <a href="https://www.yuantafutures.com.tw/iTRADER/"><img src="https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/Fintech互動網頁/img/iTRADER.png" class="iTRADER"></a>
+    </div>
+</body>
+</html>
