@@ -64,12 +64,19 @@ video {
 #a5 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/iTRADER亮點網頁/img/A5.jpg'); }
 #q6 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/iTRADER亮點網頁/img/Q6.jpg'); }
 #a6 { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/iTRADER亮點網頁/img/A6.jpg'); }
-#thanks { background-image: url('https://cdn.jsdelivr.net/gh/Zruien/Zruien.github.io@ryan/iTRADER亮點網頁//img/感謝頁面.jpg'); }
 
 .form {
     position: absolute;
     width: 17%;
-    top: 330px;
+    top: 320px;
     left: 100px;
     z-index: 10;  
 }
+.iTRADER {
+    position: absolute;
+    width: 27%;
+    top: 320px;
+    left: 218px;
+    z-index: 10; 
+}
+
