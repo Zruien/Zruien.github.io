@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 封面 -->
+     <div class="page" id="index" onclick="nextPage('q1')" style="background-image: url(img/index.jpg)">
+        <div class="tech-background">
+            <div class="flow-line"></div>
+            <div class="flow-line"></div>
+            <div class="flow-line horizontal-left-to-right"></div>
+            <div class="flow-line horizontal-right-to-left"></div>
+        </div>
+    </div>
+    <!-- 題目1 -->
+    <div class="page" id="q1" style="display: none; background-image: url(img/q1.jpg)">
+        <div class="tech-background">
+            <div class="flow-line"></div>
+            <div class="flow-line"></div>
+            <div class="flow-line horizontal-left-to-right"></div>
+            <div class="flow-line horizontal-right-to-left"></div>
+        </div>
+        <button class="back-button" onclick="prePage('index');">回上一頁</button>
+        <button class="ans-button" onclick="checkAnswer(this, 'a1', false)"> A. 超過10種</button>
+        <button class="ans-button" onclick="checkAnswer(this, 'a1', false)"> B. 超過20種</button>
+        <button class="ans-button" onclick="checkAnswer(this, 'a1', false)"> C. 超過30種</button>
+        <button class="ans-button" onclick="checkAnswer(this, 'a1', true)"> D. 超過700種</button>
+        <p class="tech-text">點選正確解答前往下頁</p>
+    </div>
+</body>
+
+<style>
+    body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.page {
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    flex-direction: column; /* 將flex容器內的子元素排列成一列（垂直方向） */
+    background-size: cover;
+    background-position: center;
+}
+</style>
+
+<script>
+    function nextPage(nextPageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.style.display = 'none');
+    document.getElementById(nextPageId).style.display = 'flex';
+}
+
+function prePage(prevPageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.style.display = 'none');
+    document.getElementById(prevPageId).style.display = 'flex';
+}
+
+function checkAnswer(button, nextPageId, isCorrect) {
+    if (isCorrect) {
+        button.classList.add('correct-answer');
+        setTimeout(() => {
+            nextPage(nextPageId);
+        }, 500); 
+    } else {
+        button.classList.add('wrong-answer');
+        setTimeout(() => {
+            button.classList.remove('wrong-answer');
+        }, 500);
+    }
+}
+
+</script>
+</html>

@@ -1,0 +1,199 @@
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.page {
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    flex-direction: column; /* 將flex容器內的子元素排列成一列（垂直方向） */
+    background-size: cover;
+    background-position: center;
+}
+.back-button, .ans-button {       
+    background-color: rgba(103, 194, 255, 0.4);
+    color: rgb(255, 255, 255); 
+    border: 2px solid #ffffff; /* 按鈕邊框顏色 */
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10; /* 確保按鈕在其他元素之上 */
+    transition: all 0.3s ease;
+    animation: glowing-border 2s infinite; /* 添加動畫 */
+    outline: none;
+}
+
+/* 發光button動畫 */
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 2px rgba(1, 192, 255, 0.6), 
+                    0 0 4px rgba(1, 192, 255, 0.6), 
+                    0 0 6px rgba(1, 192, 255, 0.6);
+        border-color: #01c0ff;
+    }
+    50% {
+        box-shadow: 0 0 4px rgba(1, 192, 255, 0.8), 
+                    0 0 8px rgba(1, 192, 255, 0.8), 
+                    0 0 12px rgba(1, 192, 255, 0.8);
+        border-color: #01c0ff;
+    }
+    100% {
+        box-shadow: 0 0 2px rgba(1, 192, 255, 0.6), 
+                    0 0 4px rgba(1, 192, 255, 0.6), 
+                    0 0 6px rgba(1, 192, 255, 0.6);
+        border-color: #01c0ff;
+    }
+}
+
+.back-button {
+    position: absolute;
+    padding: 3% 2%; /* 改button內距 */
+    top: 2%; 
+    left: 3%; 
+    width: 25%; 
+}
+.ans-button {
+    padding: 3% 2%; 
+    margin-top: 6%; /* 改button間的距離 */
+    width: 70%;
+    transition: background-color 0.5s ease, color 0.5s ease, background 0.5s ease;
+}
+.tech-text {
+    position: absolute;
+    font-weight: bold;
+    color: #ffffff;
+    bottom: 2%;
+    font-size: 0.9em;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 
+            0 0 5px rgba(255, 255, 255, 0.1),
+            0 0 10px rgba(255, 255, 255, 0.1),
+            0 0 15px rgba(255, 255, 255, 0.1),
+            0 0 20px rgba(255, 255, 255, 0.1),
+            0 0 25px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 0.3),
+            0 0 15px rgba(255, 255, 255, 0.3),
+            0 0 20px rgba(255, 255, 255, 0.3),
+            0 0 25px rgba(255, 255, 255, 0.3),
+            0 0 30px rgba(255, 255, 255, 0.3);
+    }
+}
+
+video {
+    position: absolute; 
+    top: 45%; 
+    width: 100%; 
+    display: block;
+    z-index: 15;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.3);
+}
+.correct-answer {
+    background: linear-gradient(45deg, green, lime);
+    color: white;
+}
+.wrong-answer {
+    background: linear-gradient(45deg, red, darkred);
+    color: white;
+}
+.form {
+    position: absolute;
+    width: 20%;
+    top: 40%;
+    left: 41%;
+    z-index: 10;  
+}
+.account {
+    position: absolute;
+    width: 17%;
+    top: 55%;
+    left: 70% ;
+    z-index: 10; 
+}
+.iTrader {
+    position: absolute;
+    width: 29%;
+    top: 55%;
+    left: 10%;
+    z-index: 10; 
+}
+
+/* 藍色流線 */
+.tech-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 8;
+}
+.flow-line {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 255, 255, 0), rgba(103, 203, 249, 0.8), rgba(0, 255, 255, 0));
+    animation: flow 5s linear infinite;
+}
+/* 垂直線 */
+.flow-line:nth-child(1) {
+    left: 4%;
+    animation-delay: 0s;
+}
+.flow-line:nth-child(2) {
+    left: 96%;
+    animation-delay: 4s;
+}
+/* 橫線 */
+.flow-line.horizontal-left-to-right {
+    top: 3%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 255, 255, 0), rgba(103, 203, 249, 0.8), rgba(0, 255, 255, 0));
+    animation: flow-horizontal-left-to-right 5s linear infinite;
+}
+.flow-line.horizontal-right-to-left {
+    top: 97%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 255, 255, 0), rgba(103, 203, 249, 0.8), rgba(0, 255, 255, 0));
+    animation: flow-horizontal-right-to-left 5s linear infinite;
+}
+
+@keyframes flow {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes flow-horizontal-left-to-right {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes flow-horizontal-right-to-left {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
