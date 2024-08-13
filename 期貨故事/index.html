@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元大期貨</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preload" href="img/index.jpg" as="image">
+    <link rel="preload" href="img/page1.jpg" as="image">
+    <link rel="preload" href="img/page2.jpg" as="image">
+    <link rel="preload" href="img/page3.jpg" as="image">
+    <link rel="preload" href="img/page4.jpg" as="image">
+    <link rel="preload" href="img/page5.jpg" as="image">
+    <link rel="preload" href="img/Q1.jpg" as="image">
+    <link rel="preload" href="img/Q2.jpg" as="image">
+    <link rel="preload" href="img/Q3.jpg" as="image">
+    <link rel="preload" href="img/Q4.jpg" as="image">
+    <link rel="preload" href="img/thank.jpg" as="image">
+    <link rel="preload" href="img/skip.png" as="image">
+    <link rel="preload" href="img/prepage.png" as="image">
+    <link rel="preload" href="img/form.png" as="image">
+    <link rel="preload" href="img/account.png" as="image">
+</head>
+<body>
+    <!-- 封面 -->
+    <div class="page" id="index" onclick="nextPage('page1')">
+    </div>
+    <!-- 期貨的起源 -->
+    <div class="page" id="page1" onclick="nextPage('page2')" style="display:none;">
+        <img src="img/bird.gif" class="bird">
+        <div class="sun1">
+            <div class="ray_box">
+                <div class="ray ray1"></div>
+                <div class="ray ray2"></div>
+                <div class="ray ray3"></div>
+                <div class="ray ray4"></div>
+                <div class="ray ray5"></div>
+                <div class="ray ray6"></div>
+                <div class="ray ray7"></div>
+                <div class="ray ray8"></div>
+                <div class="ray ray9"></div>
+                <div class="ray ray10"></div>
+            </div>
+        </div>
+        <img src="img/skip.png" class="skip" onclick="nextPage('q1'); event.stopPropagation();">       
+        <img src="img/prepage.png" class="prepage" onclick="prePage('index'); event.stopPropagation();">
+    </div>
+    <!-- 農夫的擔憂 -->
+    <div class="page" id="page2" onclick="nextPage('page3')" style="display:none;">
+        <div class="sun2">
+            <div class="ray_box">
+                <div class="ray ray1"></div>
+                <div class="ray ray2"></div>
+                <div class="ray ray3"></div>
+                <div class="ray ray4"></div>
+                <div class="ray ray5"></div>
+                <div class="ray ray6"></div>
+                <div class="ray ray7"></div>
+                <div class="ray ray8"></div>
+                <div class="ray ray9"></div>
+                <div class="ray ray10"></div>
+            </div>
+        </div>
+        <img src="img/skip.png" class="skip" onclick="nextPage('q1'); event.stopPropagation();">       
+        <img src="img/prepage.png" class="prepage" onclick="prePage('page1'); event.stopPropagation();">   
+    </div>
+    <!-- 商人的擔憂 -->
+    <div class="page" id="page3" onclick="nextPage('page4')" style="display:none;">
+        <div id="lightningEffect" class="lightning-effect"></div>
+        <div id="rainBox"></div>
+        <img src="img/skip.png" class="skip" onclick="nextPage('q1'); event.stopPropagation();">       
+        <img src="img/prepage.png" class="prepage" onclick="prePage('page2'); event.stopPropagation();">    
+    </div>
+    <!-- 期貨應運而生 -->
+    <div class="page" id="page4" onclick="nextPage('page5')" style="display:none;">
+        <div class="sun3">
+            <div class="ray_box">
+                <div class="ray ray1"></div>
+                <div class="ray ray2"></div>
+                <div class="ray ray3"></div>
+                <div class="ray ray4"></div>
+                <div class="ray ray5"></div>
+                <div class="ray ray6"></div>
+                <div class="ray ray7"></div>
+                <div class="ray ray8"></div>
+                <div class="ray ray9"></div>
+                <div class="ray ray10"></div>
+            </div>
+        </div>      
+        <img src="img/prepage.png" class="prepage" onclick="prePage('page3'); event.stopPropagation();">    
+    </div>
+    <!-- 期貨的益處 -->
+    <div class="page" id="page5" onclick="nextPage('q1')" style="display:none;">
+        <div class="sun3">
+            <div class="ray_box">
+                <div class="ray ray1"></div>
+                <div class="ray ray2"></div>
+                <div class="ray ray3"></div>
+                <div class="ray ray4"></div>
+                <div class="ray ray5"></div>
+                <div class="ray ray6"></div>
+                <div class="ray ray7"></div>
+                <div class="ray ray8"></div>
+                <div class="ray ray9"></div>
+                <div class="ray ray10"></div>
+            </div>
+        </div>
+        <img src="img/prepage.png" class="prepage" onclick="prePage('page4'); event.stopPropagation();">
+    </div>
+    <!-- 題目 1 -->
+    <div class="page" id="q1" style="display:none;">
+        <img src="img/prepage.png" class="prepage" onclick="prePage('page5'); event.stopPropagation();">
+        <div class="text1">
+            <h3>Q1: 什麼是期貨合約 ?</h3>
+            <table>
+                <tr>
+                    <td><strong>A. 一種立即交割的現貨合約</strong></td>
+                </tr>
+                <tr>
+                    <td><strong class="highlight" onclick="nextPage('q2')">B. 一種未來時間交割的合約</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>C. 一種無須交割的合約</strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 題目 2 -->
+    <div class="page" id="q2" style="display:none;">
+        <img src="img/prepage.png" class="prepage" onclick="prePage('q1'); event.stopPropagation();">
+        <div class="text2">
+            <h3>Q2: 期貨合約的標的物可以是什麼 ?</h3>
+            <table>
+                <tr>
+                    <td><strong>A. 農產品、金屬、能源等實體物品</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>B. 股票、債券等金融工具</strong></td>
+                </tr>
+                <tr>
+                    <td><strong class="highlight" onclick="nextPage('q3')">C. 以上皆是</strong></td>
+                </tr>
+            </table>    
+        </div>
+    </div>
+    <!-- 題目 3 -->
+    <div class="page" id="q3" style="display:none;">
+        <img src="img/prepage.png" class="prepage" onclick="prePage('q2'); event.stopPropagation();">
+        <div class="text3">
+            <h3>Q3: 交易期貨的優點有哪些 ?</h3>
+            <table>
+                <tr>
+                    <td><strong>A. 成本比股票便宜很多(交易稅、手續費)</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>B. 較低的交易限制</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>C. 財務槓桿效應大</strong></td>
+                </tr>
+                <tr>
+                    <td><strong class="highlight" onclick="nextPage('q4')">D. 以上皆是</strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 題目 4 -->
+    <div class="page" id="q4" style="display:none;">
+        <img src="img/prepage.png" class="prepage" onclick="prePage('q3'); event.stopPropagation();">
+        <div class="text4">
+            <h3>Q4: 國內期貨商首家專為交易人打造</h3>
+            <h3>的平台是?</h3>
+            <table>
+                <tr>
+                    <td><strong class="highlight" onclick="nextPage('thank')">A. iTRADER交易達人 </strong></td>
+                </tr>
+                <tr>
+                    <td><strong>B. 滿滿的大平台</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>C. 知道你還有錢達人</strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 感謝頁面 -->
+    <div class="page" id="thank" style="display:none;">
+        <img src="img/prepage.png" class="prepage" onclick="prePage('q4'); event.stopPropagation();">
+        <a href=""><img src="img/form.png" class="form"></a>
+        <a href="https://www.yuantafutures.com.tw/openaccount_01"><img src="img/account.png" class="account"></a>
+    </div>
+</body>
+
+<script>
+
+// 下雨動畫
+const box = document.getElementById('rainBox');
+    let boxHeight = box.clientHeight;
+    let boxWidth = box.clientWidth;
+    window.onresize = function() {
+        boxHeight = box.clientHeight;
+        boxWidth = box.clientWidth;
+    }
+    function rainDot() {
+        let rain = document.createElement('div');
+        rain.classList.add('rain');
+        rain.style.top = 0;
+        rain.style.left = `${Math.random() * boxWidth}px`;
+        rain.style.opacity = Math.random();
+        box.appendChild(rain);
+        let gap = 1;
+        const loop = setInterval(() => {
+            if (parseInt(rain.style.top) > boxHeight) {
+                clearInterval(loop);
+                box.removeChild(rain)
+            }
+            gap++
+            rain.style.top = `${parseInt(rain.style.top)+gap}px`;
+        }, 20)
+    }
+    setInterval(() => {
+        rainDot();
+    }, 50)
+
+</script>
+
+</html>
