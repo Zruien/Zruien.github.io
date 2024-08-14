@@ -17,7 +17,7 @@ function nextPage(nextPageId) {
     }
     // 樹葉動畫
     if (nextPageId == 'page5') {
-        setInterval(createLeaf, 1500);
+        setInterval(createLeaf, 1200);
     }
 }
 
@@ -37,6 +37,9 @@ function prePage(prevPageId) {
     if (prevPageElement.querySelector('#rainBox')) {
         boxHeight = prevPageElement.querySelector('#rainBox').clientHeight;
         boxWidth = prevPageElement.querySelector('#rainBox').clientWidth;
+    }
+    if (prevPageId == 'page5') {
+    setInterval(createLeaf, 1200);
     }
 }
 
